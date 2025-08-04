@@ -66,9 +66,9 @@ const Header = () => {
               </Link>
             ))}
             <div className="ml-4">
-              <Link to="/contact" className="btn-cyber-primary text-sm">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform" className="btn-cyber-primary text-sm">
                 Join Us
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -106,12 +106,12 @@ const Header = () => {
               </Link>
             ))}
             <div className="pt-4">
-              <Link
-                to="/contact"
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform"
                 className="block w-full text-center btn-cyber-primary"
               >
                 Join Us
-              </Link>
+              </a>
             </div>
           </div>
         </div>

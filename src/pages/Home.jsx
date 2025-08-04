@@ -1,90 +1,86 @@
 import { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import rmLogo from '../components/RM white.png'; // Make sure you have this logo imported for the mobile hero
 
 const Home = () => {
-  // Data re-themed for cyberpunk
-  // const stats = [
-  //   { number: "50+", label: "Active Agents", description: "Cybernetically-enhanced builders." },
-  //   { number: "25+", label: "Black-Ops Projects", description: "Classified robotics initiatives." },
-  //   { number: "10+", label: "Syndicate Accolades", description: "Recognition from the tech underground." }
-  // ];
-
   const features = [
-    {
-      title: "AI & Machine Learning",
-      description: "Cutting-edge research in artificial intelligence, neural networks, and autonomous decision-making systems.",
-      colorClass: "border-primary"
-    },
-    {
-      title: "Autonomous Systems",
-      description: "Developing self-navigating robots, drones, and vehicles with advanced sensor integration and real-time processing.",
-      colorClass: "border-secondary"
-    },
-    {
-      title: "IoT Integration",
-      description: "Connecting robotics with Internet of Things, creating smart environments and interconnected systems.",
-      colorClass: "border-accent"
-    }
+    { title: "AI & Machine Learning", description: "Cutting-edge research in artificial intelligence, neural networks, and autonomous decision-making systems.", colorClass: "border-primary" },
+    { title: "Autonomous Systems", description: "Developing self-navigating robots, drones, and vehicles with advanced sensor integration.", colorClass: "border-secondary" },
+    { title: "IoT Integration", description: "Connecting robotics with Internet of Things, creating smart environments and interconnected systems.", colorClass: "border-accent" }
   ];
   
   const upcomingEvents = [
-    {
-      title: "🚀 WE ARE RECRUITING | Robo Mellontikos",
-      date: "2025.09.15",
-      description: "If your heart beats in binary and your mind sparks with innovation, this is your cue. Whether you're a coder, creator, planner, or dreamer, if you’ve got the drive, we’ve got the platform.",
-      status: "REGISTRATION OPEN"
-    },
-    // {
-    //   title: "Synth-Wave Solderfest",
-    //   date: "2025.10.04",
-    //   description: "A 24-hour hardware hackathon. Build, modify, and create to the beat of retro-futuristic soundscapes.",
-    //   status: "UPCOMING"
-    // },
-    // {
-    //   title: "AI Consciousness Symposium",
-    //   date: "2025.11.20",
-    //   description: "A deep dive into the ethics and possibilities of true artificial consciousness. Can a machine truly think?",
-    //   status: "PLANNING"
-    // }
+    { title: "🚀 WE ARE RECRUITING | Robo Mellontikos", date: "2025.09.15", description: "If your heart beats in binary and your mind sparks with innovation, this is your cue. Whether you're a coder, creator, planner, or dreamer, if you’ve got the drive, we’ve got the platform.", status: "REGISTRATION OPEN" },
   ];
 
-  // Refs for the elements to be animated
   const heroTextContainer = useRef(null);
 
-  // GSAP animation using useLayoutEffect for smoother animations
   useLayoutEffect(() => {
-    // Using GSAP context for proper cleanup
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 1 }); // Add a 1-second delay to the whole timeline
-
+      const tl = gsap.timeline({ delay: 1 });
       tl.from(".animate-text", {
         opacity: 0,
-        y: 50, // Start 50px below final position
+        y: 50,
         duration: 1,
         ease: "power3.out",
-        stagger: 0.4 // Stagger the animation of each element by 0.2s
+        stagger: 0.4
       });
-    }, heroTextContainer); // Scope the animation to the container
-
-    // Cleanup function
+    }, heroTextContainer);
     return () => ctx.revert();
   }, []);
-
 
   return (
     <div className="min-h-screen cyber-grid-bg overflow-hidden">
       
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center p-4 bg-[#0d0d0d]">
-        <div ref={heroTextContainer} className='p-0 m-0 z-1 absolute top-[30%] right-[6rem] px-10'>
-          <h1 className='text-[5rem] animate-text'>Welcome to</h1>
-          <span className='m-0 p-0 superFont text-[4rem] tracking-widest block text-[#710D73] animate-text'>Robo <span className='block leading-3 mb-16'>Mellontikos</span></span>
-          <h3 className='z-1 text-[2rem] absolute animate-text'><span>The official robotics club of UEM Kolkata</span></h3>
-        </div>
-        <iframe loading='eager' className='h-[100dvh] z-99 absolute -left-80' src='https://my.spline.design/nexbotrobotcharacterconcept-oY4xe8E3fyiaYJQK5zWutMw8/' frameBorder='0' width='100%' height='100%'></iframe>
-        <div className='absolute px-20 py-5 bg-[#0d0d0d] bottom-0 right-[21rem] text-[#0d0d0d]'>h</div>
-      </section>
+      {/* ======================================= */}
+      {/* == NEW: Mobile-Only Hero Section == */}
+      {/* ======================================= */}
+      <div className="lg:hidden"> {/* This entire div is hidden on large screens */}
+        <section className="relative min-h-screen flex flex-col items-center justify-center text-center p-4">
+          <div className="absolute inset-0 bg-[#0d0d0d]"></div>
+          
+          <div className="relative z-10 flex flex-col items-center">
+            {/* Pulsing Logo */}
+            <div className="mobile-hero-logo w-32 h-32 rounded-full flex items-center justify-center mb-8 bg-black">
+              <img src={rmLogo} alt="RoboMellontikos Logo" className="w-24 h-24" />
+            </div>
+
+            {/* Title and Tagline */}
+            <h1 className="glitch-text text-5xl font-black mb-4" data-text="Robo Mellontikos">
+              Robo Mellontikos
+            </h1>
+            <p className="font-heading text-lg tracking-widest text-gray-400 mb-10">
+              ENGINEERING THE FUTURE
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform" className="btn-cyber-primary">
+                Join Us
+              </a>
+              <Link to="/events" className="btn-cyber-outline">
+                Explore Our Work
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ======================================= */}
+      {/* == Desktop Hero Section (Untouched) == */}
+      {/* ======================================= */}
+      <div id="desktop-hero-container"> {/* This wrapper is used by CSS to hide this section on mobile */}
+        <section className="relative min-h-screen flex items-center justify-center p-4 bg-[#0d0d0d]">
+          <div ref={heroTextContainer} className='p-0 m-0 z-20 absolute top-[30%] right-[6rem] px-10'>
+            <h1 className='text-[5rem] animate-text'>Welcome to</h1>
+            <span className='m-0 p-0 superFont text-[4rem] tracking-widest block text-[#710D73] animate-text'>Robo <span className='block leading-3 mb-16'>Mellontikos</span></span>
+            <h3 className='text-[2rem] absolute animate-text'><span>The official robotics club of UEM Kolkata</span></h3>
+          </div>
+          <iframe loading='eager' className='h-[100dvh] z-99 absolute -left-80' src='https://my.spline.design/nexbotrobotcharacterconcept-oY4xe8E3fyiaYJQK5zWutMw8/' frameBorder='0' width='100%' height='100%'></iframe>
+          <div className='z-300 absolute px-20 py-5 bg-[#0d0d0d] bottom-0 right-[21rem] text-[#0d0d0d]'>h</div>
+        </section>
+      </div>
 
       {/* Features Section */}
       <section className="relative section-padding py-20">
@@ -138,7 +134,7 @@ const Home = () => {
             <Link to="/events" className="btn-cyber-outline">
               View All Transmissions
             </Link>
-           </div>
+          </div>
         </div>
       </section>
 
@@ -152,7 +148,7 @@ const Home = () => {
             The future isn't written. It's built. Join our syndicate and help us solder the circuits of tomorrow.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <a href="https://qr.me-qr.com/OEvx8bcQ" className="btn-cyber-primary">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform" className="btn-cyber-primary">
               Join Us
             </a>
             <Link to="/events" className="btn-cyber-outline">

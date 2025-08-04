@@ -4,45 +4,30 @@ import roboDandal from './PastEvents/robo-dangal.webp'
 import roboGt from './PastEvents/robo-gt.webp'
 import roboLeague from './PastEvents/robo-league.webp'
 import roboSumo from './PastEvents/robo-sumo.webp'
+import poster from '../assets/images/Recruitment Poster (1).png'
 import EventCard from '../components/EventCard'; // Assuming EventCard is styled to be neutral or will adapt
 
 const Events = () => {
   // NOTE: Dates updated to be in the future for logical consistency
   const upcomingEvents = [
     {
-      title: "Robotics Bootcamp 2025",
-      date: "September 15-16, 2025",
-      location: "UEM Main Campus",
-      description: "Intensive 2-day bootcamp covering fundamentals of robotics, Arduino programming, and sensor integration. Perfect for beginners and intermediate learners.",
+      title: "Raspberry pi Bootcamp 2025",
+      date: "To Be Announced",
+      location: "UEMK Ficci Auditorium",
+      description: "Intensive 2-day bootcamp covering fundamentals of raspberry pi, programming, and sensor integration. Perfect for beginners and intermediate learners.",
       status: "upcoming",
-      image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      title: "AI in Robotics Symposium",
-      date: "October 22, 2025",
-      location: "Auditorium Hall",
-      description: "Expert talks on the latest developments in artificial intelligence applications in robotics, featuring industry leaders and research scholars.",
-      status: "upcoming",
-      image: "https://images.pexels.com/photos/8566446/pexels-photo-8566446.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      title: "Cybernetic Showdown 2025",
-      date: "November 5-7, 2025",
-      location: "Sector-5, Salt Lake",
-      description: "Competing in the prestigious national championship with our autonomous navigation robot and line-following bot teams.",
-      status: "upcoming",
-      image: "https://images.pexels.com/photos/2085831/pexels-photo-2085831.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "https://lh5.googleusercontent.com/proxy/uPM0FTbEew-CdV8Vm41PhYS38Ye2RwXm-o7zCnsHvrd1ugMxrmNVPNMwQDnPH7k6zXcWwxga8Ko7m7tRJOts52oh5QKPxbzWK7t7L78"
     }
   ];
 
   const ongoingEvents = [
     {
-      title: "Weekly Arduino Workshop",
-      date: "Every Saturday",
-      location: "Data Lab 204",
-      description: "Regular hands-on sessions for members to learn and practice Arduino programming, circuit design, and project development.",
+      title: "🚀 WE ARE RECRUITING | Robo Mellontikos",
+      date: "Last Date: 2025.09.15",
+      location: null,
+      description: "If your heart beats in binary and your mind sparks with innovation, this is your cue. Whether you're a coder, creator, planner, or dreamer, if you’ve got the drive, we’ve got the platform.",
       status: "ongoing",
-      image: "https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: `${poster}`
     }
   ];
 
@@ -125,10 +110,10 @@ const Events = () => {
               Subscribe to Updates
             </a>
             <a
-              href="mailto:robomellontikos@uem.edu.in?subject=Event Partnership"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform"
               className="btn-cyber-outline"
             >
-              Partner With Us
+              Join Us
             </a>
           </div>
         </div>

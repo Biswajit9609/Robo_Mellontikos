@@ -334,3 +334,29 @@ body {
   background: white; /* High-contrast hover effect */
   box-shadow: 0 0 15px var(--color-primary); /* Add a glow on hover */
 }
+/* In index.css - ADD these new rules */
+
+/* This hides the desktop hero section on screens smaller than 1024px */
+@media (max-width: 1023px) {
+  #desktop-hero-container {
+    display: none;
+  }
+}
+
+/* Styling for the new mobile hero's logo */
+.mobile-hero-logo {
+  border: 2px solid var(--color-primary);
+  box-shadow: 0 0 40px var(--color-primary);
+  animation: pulse-glow 4s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px var(--color-secondary);
+    border-color: var(--color-secondary);
+  }
+  to {
+    box-shadow: 0 0 50px var(--color-primary);
+    border-color: var(--color-primary);
+  }
+}

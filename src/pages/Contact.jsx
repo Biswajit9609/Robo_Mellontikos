@@ -1,18 +1,39 @@
 import React, { useState } from 'react';
 
 const Contact = () => {
-  const contactInfo = [
-    { title: "Secure Email", info: "robotics.society@uem.edu.in", icon: "[EMAIL]", link: "mailto:robotics.society@uem.edu.in" },
-    { title: "Direct Comms", info: "+91 8391903846", icon: "[VOICE]", link: "tel:+918391903846" },
-    { title: "HQ Coordinates", info: "UEM, New Town, Kolkata - 700156\nWest Bengal, India", icon: "[LOCATION]", link: "https://www.google.com/maps/search/University+of+Engineering+and+Management+New+Town,+Kolkata" },
-    { title: "Active Hours", info: "Mon-Fri: 1000-1700 HRS\nSat: 1000-1600 HRS\nSun: [OFFLINE]", icon: "[CLOCK]" }
+  // NEW: Replaced the old contactInfo with a new socialChannels array.
+  const socialChannels = [
+    { 
+      title: "Instagram", 
+      info: "@rmellontikos", 
+      icon: "[INSTA]", 
+      link: "https://www.instagram.com/rmellontikos/" 
+    },
+    { 
+      title: "LinkedIn", 
+      info: "/robo-mellontikos", 
+      icon: "[LINKD]", 
+      link: "https://www.linkedin.com/company/robo-mellontikos/" 
+    },
+    { 
+      title: "X (Twitter)", 
+      info: "@RMellontikos", 
+      icon: "[X]", 
+      link: "https://x.com/RMellontikos" 
+    },
+    { 
+      title: "Facebook", 
+      info: "/robouemk", 
+      icon: "[FB]", 
+      link: "https://www.facebook.com/robouemk" 
+    },
   ];
 
   const departments = [
-    { name: "General Inquiries", email: "robomellontikos@uem.edu.in", description: "For general questions and information about the club" },
-    { name: "Membership", email: "membership@robomellontikos.uem.edu.in", description: "For joining the club and membership-related queries" },
-    { name: "Events", email: "events@robomellontikos.uem.edu.in", description: "For event participation, sponsorship, and collaboration" },
-    { name: "Technical Support", email: "tech@robomellontikos.uem.edu.in", description: "For technical queries and project assistance" }
+    { name: "General Inquiries", email: "Ankush Dutta : 8391903846", description: "For general questions and information about the club" },
+    { name: "Membership", email: "Hitesh Mukherjee : 6291605058", description: "For joining the club and membership-related queries" },
+    { name: "Events", email: "Amitabh Daripa : 8116262946", description: "For event participation, sponsorship, and collaboration" },
+    { name: "Technical Support", email: "Biswajit Chatterjee : 7001641316", description: "For technical queries and project assistance" }
   ];
 
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -64,25 +85,22 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* MODIFIED: Social Handles Section */}
       <section className="section-padding px-4">
         <div className="container-max mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl text-white">Communication Channels</h2>
-            <p className="text-xl text-gray-400 mt-4 max-w-3xl mx-auto">Multiple secure data-ports to connect with our network.</p>
+            <h2 className="font-heading text-4xl text-white">Network Channels</h2>
+            <p className="text-xl text-gray-400 mt-4 max-w-3xl mx-auto">Follow our public data streams across the net.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((item, index) => (
+            {/* MODIFIED: Now maps over socialChannels */}
+            {socialChannels.map((item, index) => (
               <div key={index} className="hud-card p-6 text-center border-secondary">
                 <div className="font-mono text-2xl text-primary mb-4 flicker">{item.icon}</div>
                 <h3 className="font-heading text-xl text-white mb-3">{item.title}</h3>
-                {item.link ? (
-                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200 whitespace-pre-line">
-                    {item.info}
-                  </a>
-                ) : (
-                  <p className="text-gray-300 whitespace-pre-line">{item.info}</p>
-                )}
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-200 whitespace-pre-line">
+                  {item.info}
+                </a>
               </div>
             ))}
           </div>
