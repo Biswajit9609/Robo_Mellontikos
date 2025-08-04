@@ -1,0 +1,336 @@
+/* In your main CSS file (e.g., index.css) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap');
+
+/* NEW: Updated Cyberpunk Theme Colors from your palette */
+:root {
+  --color-bg: #0D0D0D;           /* Near Black */
+  --color-bg-deep-purple: #260124; /* Dark Purple for cards */
+  --color-primary: #F24BA7;      /* Hot Pink */
+  --color-secondary: #710D73;    /* Mid Purple */
+  --color-accent: #660B8C;       /* Violet */
+  --font-body: 'Share Tech Mono', monospace;
+  --font-heading: 'Orbitron', sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: #e0e0e0;
+  font-family: var(--font-body);
+}
+
+/* Custom Background with Grid */
+.cyber-grid-bg {
+    background-color: var(--color-bg);
+    background-image: 
+        linear-gradient(var(--color-accent) 1px, transparent 1px),
+        linear-gradient(to right, var(--color-accent) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: -1px -1px;
+    background-attachment: fixed;
+}
+
+/* Glitch Text Effect - Updated with new colors */
+.glitch-text {
+  position: relative;
+  font-family: var(--font-heading);
+  text-shadow: 
+    0.05em 0 0 rgba(113, 13, 115, 0.75),  /* Secondary Purple */
+    -0.05em 0 0 rgba(242, 75, 167, 0.75); /* Primary Pink */
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+  left: -0.05em;
+  text-shadow: 0.05em 0 0 rgba(242, 75, 167, 0.75); /* Primary Pink */
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: 0.05em;
+  text-shadow: -0.05em 0 0 rgba(113, 13, 115, 0.75); /* Secondary Purple */
+  animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  100% { clip: rect(92px, 9999px, 98px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(80px, 9999px, 101px, 0); }
+  100% { clip: rect(12px, 9999px, 25px, 0); }
+}
+
+/* HUD-style Card - Updated with new colors */
+.hud-card {
+  background: rgba(38, 1, 36, 0.6); /* Dark Purple with transparency */
+  border: 1px solid var(--color-accent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hud-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Cyberpunk Buttons - Updated with new colors */
+.btn-cyber-primary {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-bg-deep-purple);
+  background-color: var(--color-primary);
+  padding: 12px 24px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  transition: all 0.2s ease;
+}
+.btn-cyber-primary:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+.btn-cyber-outline {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  padding: 10px 22px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  transition: all 0.2s ease;
+}
+.btn-cyber-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg-deep-purple);
+}
+
+/* Flicker Animation for text/icons */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.flicker {
+  animation: flicker 1.5s infinite linear;
+}
+
+/* NEW: Utility classes for theming */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-accent { color: var(--color-accent); }
+
+.border-primary { border-color: var(--color-primary); }
+.border-secondary { border-color: var(--color-secondary); }
+.border-accent { border-color: var(--color-accent); }
+
+.bg-primary { background-color: var(--color-primary); }
+
+@font-face {
+    font-family: 'Supercharge';
+    src: url(./assets/fonts/Supercharge-JRgPo.otf);
+}
+.superFont {
+    font-family: 'Supercharge', sans-serif;
+}
+/* In your main CSS file (e.g., index.css) - ADD these rules */
+
+/* Header Styling */
+.cyber-header-scrolled {
+  background: rgba(38, 1, 36, 0.75); /* var(--color-bg-deep-purple) with opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* border-bottom: 1px solid var(--color-accent); */
+}
+
+/* Custom drop shadow filter for the logo */
+.filter.drop-shadow-primary {
+  filter: drop-shadow(0px 0px 8px var(--color-primary));
+}
+
+/* Navigation Link Styling */
+.nav-link {
+  position: relative;
+  font-family: var(--font-body);
+  color: #a0aec0; /* gray-400 */
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* Underline for Nav Link */
+.nav-link .nav-link-underline {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover .nav-link-underline,
+.nav-link-active .nav-link-underline {
+  transform: scaleX(1);
+}
+
+/* Active Navigation Link State */
+.nav-link-active {
+  color: var(--color-primary);
+}
+.nav-link-active:hover {
+  color: var(--color-primary);
+}
+
+/* Make mobile active link have a background for clarity */
+.md\\:hidden .nav-link-active {
+    background-color: rgba(242, 75, 167, 0.1); /* primary with opacity */
+}
+
+/* In your main CSS file (e.g., index.css) - ADD these rules */
+
+/* Footer Styling */
+.cyber-footer {
+  background-color: var(--color-bg-deep-purple);
+  border-top: 2px solid var(--color-primary);
+  clip-path: polygon(0 0, 100% 10px, 100% 100%, 0 100%);
+  padding-top: 10px;
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1.25rem; /* 20px */
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-link {
+  font-family: var(--font-body);
+  color: #d1d5db; /* gray-300 */
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  padding-left: 1.25rem; /* 20px */
+}
+
+.footer-link::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: white;
+  padding-left: 1.5rem; /* 24px */
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+}
+
+/* Social Media Icons */
+.social-link {
+  color: #9ca3af; /* gray-400 */
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--color-primary);
+  transform: scale(1.1) translateY(-2px);
+  filter: drop-shadow(0px 0px 4px var(--color-primary));
+}
+/* In your main CSS file (e.g., index.css) - ADD these rules */
+
+/* Cyberpunk Form Styling */
+.cyber-label {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  font-size: 0.875rem; /* 14px */
+}
+
+.cyber-input, .cyber-textarea {
+  background-color: rgba(13, 13, 13, 0.5); /* var(--color-bg) with opacity */
+  border: 1px solid var(--color-accent);
+  color: #e0e0e0;
+  padding: 12px 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+}
+
+.cyber-input:focus, .cyber-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px var(--color-primary);
+}
+
+/* Loading Dots Animation */
+.loading-dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  animation: loading-pulse 1.4s infinite ease-in-out both;
+}
+.loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes loading-pulse {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
+}
+
+/* Themed Google Map */
+.cyber-map {
+  border: 2px solid var(--color-accent);
+  filter: grayscale(1) invert(1) hue-rotate(290deg) contrast(1.2);
+}
+/* Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Reduced width */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg); /* Use the main dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary); /* Use the primary hot pink */
+  border-radius: 8px;
+  border: 1px solid var(--color-accent); /* Add a subtle violet border */
+  transition: all 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white; /* High-contrast hover effect */
+  box-shadow: 0 0 15px var(--color-primary); /* Add a glow on hover */
+}
