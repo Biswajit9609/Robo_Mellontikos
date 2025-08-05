@@ -19,7 +19,7 @@ body {
 }
 
 /* Custom Background with Grid */
-.cyber-grid-bg {
+/* .cyber-grid-bg {
     background-color: var(--color-bg);
     background-image: 
         linear-gradient(var(--color-accent) 1px, transparent 1px),
@@ -27,7 +27,9 @@ body {
     background-size: 50px 50px;
     background-position: -1px -1px;
     background-attachment: fixed;
-}
+} */
+/* In index.css, replace your .cyber-grid-bg with this */
+
 
 /* Glitch Text Effect - Updated with new colors */
 .glitch-text {
@@ -144,8 +146,15 @@ body {
     font-family: 'Supercharge';
     src: url(./assets/fonts/Supercharge-JRgPo.otf);
 }
+@font-face {
+  font-family: 'Sddystop';
+  src: url(./assets/fonts/BulzingItalic-GOLRD.ttf);
+}
 .superFont {
     font-family: 'Supercharge', sans-serif;
+}
+.sddystopfont{
+  font-family: 'Sddystop', sans-serif;
 }
 /* In your main CSS file (e.g., index.css) - ADD these rules */
 
@@ -359,4 +368,66 @@ body {
     box-shadow: 0 0 50px var(--color-primary);
     border-color: var(--color-primary);
   }
+}
+
+/* In index.css - ADD these new rules */
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+}
+
+.loading-logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  animation: flicker 2s infinite linear;
+}
+
+.loading-text {
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px var(--color-primary);
+}
+
+.progress-bar-container {
+  width: 300px;
+  height: 8px;
+  border: 1px solid var(--color-accent);
+  margin: 0 auto;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 15px var(--color-primary);
+  transition: width 0.1s linear;
+}
+
+.loading-percent {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-accent);
 }
