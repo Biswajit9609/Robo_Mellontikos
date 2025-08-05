@@ -65,7 +65,7 @@ const Events = () => {
       {/* Hero Section */}
       <section className="text-center px-4 pb-20">
         <div className="container-max mx-auto">
-          <h1 className="glitch-text text-5xl md:text-7xl font-black mb-6" data-text="BROADCASTS">
+          <h1 className="glitch-text text-4xl md:text-7xl font-black mb-6" data-text="BROADCASTS">
             BROADCASTS
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
