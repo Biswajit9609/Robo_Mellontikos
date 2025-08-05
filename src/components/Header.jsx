@@ -73,7 +73,7 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button (Hamburger Icon) */}
-          <div className="md:hidden">
+          <div className="md:hidden mr-3">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-md text-gray-300 hover:text-primary focus:outline-none"
