@@ -86,14 +86,7 @@ const Home = ({ isLoading }) => {
           
           {/* The Spline iframe is only rendered after loading is finished */}
           {!isLoading && (
-            <iframe 
-              loading='eager' 
-              className='h-[100dvh] z-99 absolute -left-80' 
-              src='https://my.spline.design/nexbotrobotcharacterconcept-oY4xe8E3fyiaYJQK5zWutMw8/' 
-              frameBorder='0' 
-              width='100%' 
-              height='100%'
-            ></iframe>
+            <iframe className='h-[100dvh] z-99 absolute -left-80' src='https://my.spline.design/nexbotrobotcharacterconcept-hIDyk2EKPE6riHUt2qyVDAZp/' frameborder='0' width='100%' height='100%'></iframe>
           )}
 
           <div className='z-300 absolute px-20 py-5 bg-[#0d0d0d] bottom-0 right-[21rem] text-[#0d0d0d]'>h</div>
