@@ -76,7 +76,7 @@ const Home = ({ isLoading }) => {
       {/* ======================================= */}
       {/* == Desktop Hero Section == */}
       {/* ======================================= */}
-      <div id="desktop-hero-container"> {/* This wrapper is hidden on mobile via CSS */}
+      <div id="desktop-hero-container">
         <section className="relative min-h-screen flex items-center justify-center p-4 bg-[#0d0d0d]">
           <div ref={heroTextContainer} className='p-0 m-0 z-20 absolute top-[30%] right-[6rem] px-10'>
             <h1 className='text-[5rem] animate-text sddystopfont tracking-widest'>Welcome to</h1>
