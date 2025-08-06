@@ -177,7 +177,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="section-padding px-4">
+      {/* <section className="section-padding px-4">
         <div className="container-max mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl text-white">Syndicate HQ</h2>
@@ -197,7 +197,7 @@ const Contact = () => {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
