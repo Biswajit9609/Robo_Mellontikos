@@ -80,13 +80,13 @@ const Home = ({ isLoading }) => {
         <section className="relative min-h-screen flex items-center justify-center p-4 bg-[#0d0d0d]">
           <div ref={heroTextContainer} className='p-0 m-0 z-20 absolute top-[30%] right-[6rem] px-10'>
             <h1 className='text-[5rem] animate-text sddystopfont tracking-widest'>Welcome to</h1>
-            <span className='m-0 p-0 superFont text-[4rem] tracking-widest block text-[#710D73] animate-text'>Robo <span className='block leading-3 mb-16'>Mellontikos</span></span>
-            <h3 className='text-[2rem] absolute animate-text sddystopfont tracking-widest'><span>The official robotics club of UEM Kolkata</span></h3>
+            <span className='m-0 p-0 superFont text-[5rem] tracking-widest block text-[#710D73] animate-text'>Robo <span className='block leading-3 mb-16'>Mellontikos</span></span>
+            <h3 className='text-[2rem] absolute animate-text tracking-widest roboto'><span>The official robotics club of UEM Kolkata</span></h3>
           </div>
           
           {/* The Spline iframe is only rendered after loading is finished */}
           {!isLoading && (
-            <iframe className='h-[100dvh] z-99 absolute -left-80' src='https://my.spline.design/nexbotrobotcharacterconcept-hIDyk2EKPE6riHUt2qyVDAZp/' frameborder='0' width='100%' height='100%'></iframe>
+            <iframe loading='eager' className='h-[100dvh] z-99 absolute -left-80' src='https://my.spline.design/nexbotrobotcharacterconcept-hIDyk2EKPE6riHUt2qyVDAZp/' frameborder='0' width='100%' height='100%'></iframe>
           )}
 
           <div className='z-300 absolute px-20 py-5 bg-[#0d0d0d] bottom-0 right-[21rem] text-[#0d0d0d]'>h</div>

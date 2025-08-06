@@ -144,14 +144,18 @@ body {
 
 @font-face {
     font-family: 'Supercharge';
-    src: url(./assets/fonts/Supercharge-JRgPo.otf);
+    src: url(./assets/fonts/Sddystopiandemo-GO7xa.otf);
 }
 @font-face {
   font-family: 'Sddystop';
   src: url(./assets/fonts/BulzingItalic-GOLRD.ttf);
 }
+.roboto{
+  font-family: "Roboto", sans-serif;
+}
 .superFont {
     font-family: 'Supercharge', sans-serif;
+    font-weight: bold;
 }
 .sddystopfont{
   font-family: 'Sddystop', sans-serif;
