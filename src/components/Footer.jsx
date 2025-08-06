@@ -63,11 +63,11 @@ const Footer = () => {
             <h3 className="footer-heading">Coordinates</h3>
             <div className="space-y-2 mt-4 font-body text-gray-300">
               <p>University of Engineering & Management</p>
-              <p>New Town, Sector 7, Kolkata - 700156</p>
+              <p>New Town, Action Area III, Kolkata - 700160</p>
               <p>West Bengal, India</p>
               <p className="pt-2">
-                <a href="mailto:robomellontikos@uem.edu.in" className="text-primary hover:underline">
-                  robomellontikos@uem.edu.in
+                <a href="mailto:robotics.society.uemk@gmail.com" className="text-primary hover:underline">
+                  robotics.society.uemk@gmail.com
                 </a>
               </p>
             </div>
