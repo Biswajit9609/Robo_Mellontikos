@@ -1,42 +1,45 @@
-const EventCard = ({ title, date, description, image, status, location }) => {
+import React from 'react';
+
+// Wrap the component in React.memo
+const EventCard = React.memo(({ title, date, description, image, status, location }) => {
+  // These helper functions are fine as they are.
   const getStatusBadge = (status) => {
     switch (status) {
-      case 'upcoming':
-        return 'badge-info';
-      case 'ongoing':
-        return 'badge-success';
-      case 'completed':
-        return 'badge-primary';
-      default:
-        return 'badge-primary';
+      case 'upcoming': return 'badge-info';
+      case 'ongoing': return 'badge-success';
+      case 'completed': return 'badge-primary';
+      default: return 'badge-primary';
     }
   };
 
   const getStatusGradient = (status) => {
     switch (status) {
-      case 'upcoming':
-        return 'from-secondary-500 to-secondary-600';
-      case 'ongoing':
-        return 'from-success-500 to-success-600';
-      case 'completed':
-        return 'from-accent-500 to-accent-600';
-      default:
-        return 'from-slate-500 to-slate-600';
+      case 'upcoming': return 'from-secondary-500 to-secondary-600';
+      case 'ongoing': return 'from-success-500 to-success-600';
+      case 'completed': return 'from-accent-500 to-accent-600';
+      default: return 'from-slate-500 to-slate-600';
     }
   };
 
   return (
     <div className="card overflow-hidden hover-lift interactive-card group">
-      {/* Apply the scaling transform to this parent div */}
-      <div className="relative group-hover:scale-110 transition-transform duration-500"> {/* MODIFIED LINE */}
+      {/* OPTIMIZATION: Added will-change to hint the browser about the upcoming transform.
+        This promotes the element to its own compositor layer for smoother animation.
+      */}
+      <div className="relative group-hover:scale-110 transition-transform duration-500 will-change-transform">
         <img
           src={image}
           alt={title}
-          className="w-full h-48 object-cover" // Removed group-hover:scale-110 from here
+          className="w-full h-48 object-cover"
+          // --- MAJOR OPTIMIZATION: Lazy load images ---
+          loading="lazy"
+          // --- Also helps to specify decoding ---
+          decoding="async"
         />
-        {/* The absolute overlay will now scale with its parent */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
         <div className="absolute top-4 right-4">
+          {/* Note: The 'pulse-glow' class might be expensive. If lag persists, inspect its CSS. 
+              It likely animates box-shadow, which is slow. Consider a pulse with opacity or transform. */}
           <span className={`badge ${getStatusBadge(status)} capitalize pulse-glow`}>
             {status}
           </span>
@@ -45,7 +48,10 @@ const EventCard = ({ title, date, description, image, status, location }) => {
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gradient transition-all duration-300">
+        {/*
+          OPTIMIZATION: Replaced 'transition-all' with a specific transition for color.
+        */}
+        <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-gradient transition-colors duration-300">
           {title}
         </h3>
         
@@ -72,6 +78,6 @@ const EventCard = ({ title, date, description, image, status, location }) => {
       </div>
     </div>
   );
-};
+});
 
 export default EventCard;

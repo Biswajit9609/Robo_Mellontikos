@@ -19,7 +19,7 @@ body {
 }
 
 /* Custom Background with Grid */
-/* .cyber-grid-bg {
+.cyber-grid {
     background-color: var(--color-bg);
     background-image: 
         linear-gradient(var(--color-accent) 1px, transparent 1px),
@@ -27,7 +27,7 @@ body {
     background-size: 50px 50px;
     background-position: -1px -1px;
     background-attachment: fixed;
-} */
+}
 /* In index.css, replace your .cyber-grid-bg with this */
 
 

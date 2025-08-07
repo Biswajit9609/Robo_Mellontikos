@@ -80,8 +80,8 @@ const Home = ({ isLoading }) => {
         <section className="relative min-h-screen flex items-center justify-center p-4 bg-[#0d0d0d]">
           <div ref={heroTextContainer} className='p-0 m-0 z-20 absolute top-[30%] right-[6rem] px-10'>
             <h1 className='text-[5rem] animate-text sddystopfont tracking-widest'>Welcome to</h1>
-            <span className='m-0 p-0 superFont text-[5rem] tracking-widest block text-[#710D73] animate-text'>Robo <span className='block leading-3 mb-16'>Mellontikos</span></span>
-            <h3 className='text-[2rem] absolute animate-text tracking-widest roboto'><span>The official robotics club of UEM Kolkata</span></h3>
+            <span className='m-0 p-0 superFont text-[5rem] tracking-widest block text-[#710D73] animate-text'>Robo <span className='block leading-3 mb-10'>Mellontikos</span></span>
+            <h3 className='text-[1.6rem] absolute animate-text tracking-widest roboto'><span>The official robotics club of UEM Kolkata</span></h3>
           </div>
           
           {/* The Spline iframe is only rendered after loading is finished */}
