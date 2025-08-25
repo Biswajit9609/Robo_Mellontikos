@@ -1,6 +1,4 @@
-// src/components/ProfileCard.jsx
-import './ProfileCard.css'
-// src/components/ProfileCard.jsx
+import './ProfileCard.css';
 
 const ProfileCard = ({
   name = "Agent Name",
@@ -9,8 +7,12 @@ const ProfileCard = ({
   linkedInUrl,
   instagramUrl,
 }) => {
+  // MODIFIED: Split the name into first and last parts
+  const nameParts = name.split(' ');
+  const firstName = nameParts[0];
+  const lastName = nameParts.slice(1).join(' ');
+
   return (
-    // The 'group' class enables the CSS-driven hover effects
     <div className="group profile-card">
       <div className="card-background-pattern" />
       <div className="scan-line" />
@@ -21,8 +23,13 @@ const ProfileCard = ({
         </div>
 
         <div className="info-container">
-          <h3 className="font-heading text-3xl text-white uppercase tracking-wider">{name}</h3>
-          <p className="font-body text-primary text-lg -mt-1 card-title">{title}</p>
+          {/* MODIFIED: Render the name on two lines */}
+          <h3 className="font-heading text-3xl text-white uppercase tracking-wider leading-tight">
+            {firstName}
+            {lastName && <br />}
+            {lastName}
+          </h3>
+          <p className="font-body text-primary text-lg mt-1 card-title">{title}</p>
         </div>
 
         <div className="socials-container">

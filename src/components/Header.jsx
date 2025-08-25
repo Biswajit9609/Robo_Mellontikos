@@ -44,11 +44,11 @@ const Header = () => {
               className="w-12 h-12 object-contain filter drop-shadow-primary flicker"
             />
             <div>
-              <h1 className="font-heading text-xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+              <h1 className="font-heading text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 tracking-wide">
                 Robo Mellontikos
               </h1>
               <p className="font-body text-sm text-gray-400">
-                UEM Kolkata
+                University of Engineering and Management, Kolkata
               </p>
             </div>
           </Link>

@@ -1,16 +1,11 @@
-/* src/components/ProfileCard.css */
-
 .profile-card {
   position: relative;
   width: 100%;
   max-width: 350px;
   aspect-ratio: 9 / 12;
   border-radius: 12px;
-  
-  /* The solid base of the card */
   background: var(--color-bg-deep-purple);
   border: 1px solid var(--color-accent);
-  
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -21,7 +16,7 @@
   border-color: var(--color-primary);
 }
 
-/* A subtle, animated background pattern */
+
 .card-background-pattern {
   position: absolute;
   inset: 0;
@@ -36,7 +31,7 @@
   to { background-position: 0 -200px; }
 }
 
-/* The scan line that appears on hover */
+
 .scan-line {
   position: absolute;
   top: 0;
@@ -59,10 +54,10 @@
 
 @keyframes scan-effect {
   0% { transform: translateY(0%); }
-  90%, 100% { transform: translateY(calc(350px * 12 / 9)); /* Animate just past the card height */ }
+  90%, 100% { transform: translateY(calc(350px * 12 / 9));}
 }
 
-/* The main content */
+
 .card-content {
   position: relative;
   z-index: 2;
@@ -76,7 +71,7 @@
   text-align: center;
 }
 
-/* Avatar Styling */
+
 .avatar-container {
   width: 200px;
   height: 200px;
@@ -98,9 +93,8 @@
   object-fit: cover;
 }
 
-/* Text and Socials */
+
 .info-container {
-  /* This container is now simpler */
   flex-grow: 1;
 }
 
@@ -110,7 +104,7 @@
 
 .socials-container {
   display: flex;
-  gap: 1.5rem; /* Increased gap */
+  gap: 1.5rem;
   padding-top: 1.5rem;
 }
 

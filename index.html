@@ -2,10 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="./src/components/RM white.png" />
+    <link id="favicon" rel="icon" type="image/png" href="./src/components/RM white.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Robo Mellontikos - The Official Robotics Club of UEMK</title>
+    <script>
+      function setFavicon() {
+        const favicon = document.getElementById("favicon");
+        const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        favicon.href = darkMode 
+          ? "./src/components/RM white.png" 
+          : "./RM Black.png";
+      }
+      setFavicon();
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+    </script>
   </head>
   <body>
     <div id="root"></div>

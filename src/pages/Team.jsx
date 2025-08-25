@@ -1,10 +1,6 @@
-// src/pages/Team.jsx
-
-import React from 'react';
 import ProfileCard from '../components/ProfileCard';
 
 const Team = () => {
-  // Data cleaned to remove the 'skills' property
   const advisors = [
     {
       name: "Dr. Ayan Chatterjee",
@@ -58,7 +54,6 @@ const Team = () => {
                 name={member.name}
                 title={member.role}
                 avatarUrl={member.avatarUrl}
-                // 'skills' prop removed
                 linkedInUrl={member.linkedInUrl}
                 instagramUrl={member.instagramUrl}
               />
@@ -82,7 +77,6 @@ const Team = () => {
                 name={member.name}
                 title={member.title}
                 avatarUrl={member.avatarUrl}
-                // 'skills' prop removed
                 linkedInUrl={member.linkedInUrl}
                 instagramUrl={member.instagramUrl}
               />
@@ -91,7 +85,6 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Join Us Section remains the same */}
       <section className="section-padding px-4">
         <div className="container-max mx-auto text-center">
           <h2 className="font-heading text-4xl text-white mb-6">Initiate Recruitment?</h2>

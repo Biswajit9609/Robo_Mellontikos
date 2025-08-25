@@ -1,7 +1,4 @@
-import React from "react";
-
 const About = () => {
-  // Data re-themed for cyberpunk
   const operatingProtocols = [
     {
       title: "Disruptive Engineering",

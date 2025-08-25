@@ -1,5 +1,3 @@
-// src/App.jsx
-
 import { BrowserRouter as Router, Routes, Route, Outlet, useLocation } from 'react-router-dom';
 import { ReactLenis } from 'lenis/react';
 import { useState, useEffect } from 'react';
@@ -14,10 +12,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import useMediaQuery from './hooks/useMediaQuery';
 import NotFoundPage from './pages/NotFound';
+import ErrorBoundary from './components/ErrorBoundary';
 
-// --- CSS Styles Component ---
-// This component injects the necessary CSS for the mobile grid background
-// directly into the document. This avoids needing a separate CSS file.
+
 const CyberGridStyles = () => (
   <style>{`
     :root {
@@ -42,7 +39,7 @@ const CyberGridStyles = () => (
   `}</style>
 );
 
-// Helper component to scroll to top on page change
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -51,12 +48,12 @@ function ScrollToTop() {
   return null;
 }
 
-// Component for the mobile cyberpunk grid background
+
 const MobileBackground = () => (
   <div className="cyber-grid" />
 );
 
-// The main layout wrapper for all pages
+
 const MainLayout = ({ isDesktop }) => {
   return (
     <div className="relative min-h-screen font-body flex flex-col">
@@ -74,7 +71,7 @@ const MainLayout = ({ isDesktop }) => {
         <MobileBackground />
       )}
 
-      {/* The Page Content - On top of the background */}
+
       <div className="relative z-10 flex flex-col flex-grow">
         <Header />
         <main className="flex-grow">
@@ -86,26 +83,28 @@ const MainLayout = ({ isDesktop }) => {
   );
 };
 
-// Component that defines all the application routes, passing props down
+
 const AppRoutes = ({ isLoading, isDesktop }) => {
   return (
     <Router>
       <ScrollToTop />
-      <Routes>
-        <Route element={<MainLayout isDesktop={isDesktop} />}>
-          <Route path="/" element={<Home isLoading={isLoading} />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Route>
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <ErrorBoundary fallback={<NotFoundPage />}>
+        <Routes>
+          <Route element={<MainLayout isDesktop={isDesktop} />}>
+            <Route path="/" element={<Home isLoading={isLoading} />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </ErrorBoundary>
     </Router>
   );
 };
 
-// The main App component that manages loading and smooth scrolling
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isFinished, setIsFinished] = useState(false);
@@ -119,7 +118,6 @@ function App() {
 
   return (
     <>
-      {/* This component adds the grid styles to the app */}
       <CyberGridStyles />
       
       {!isFinished && <LoadingScreen onLoaded={handleLoadingFinished} />}

@@ -1,7 +1,5 @@
-// src/components/LoadingScreen.jsx
-
 import { useState, useEffect } from 'react';
-import rmLogo from './RM white.png'; // Make sure this path is correct
+import rmLogo from './RM white.png';
 
 const LoadingScreen = ({ onLoaded }) => {
   const [progress, setProgress] = useState(0);
@@ -12,14 +10,13 @@ const LoadingScreen = ({ onLoaded }) => {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(interval);
-          // Start fade out, then call onLoaded after the animation
           setIsFadingOut(true);
-          setTimeout(onLoaded, 500); // Should match the fade-out duration
+          setTimeout(onLoaded, 500);
           return 100;
         }
         return prev + 1;
       });
-    }, 30); // Adjust timing for a ~3 second load
+    }, 30);
 
     return () => clearInterval(interval);
   }, [onLoaded]);

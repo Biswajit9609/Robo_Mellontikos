@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import rmLogo from './RM white.png';
-// import insta from './icons8-instagram-24.png';
 import x from "./icons8-x-50.png";
 
 const Footer = () => {

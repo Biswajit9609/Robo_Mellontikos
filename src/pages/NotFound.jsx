@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-/**
- * Custom hook to get the current window size.
- * This helps in creating responsive components.
- * @returns {object} An object containing the width and height of the window.
- */
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -13,31 +8,20 @@ const useWindowSize = () => {
   });
 
   useEffect(() => {
-    // Handler to call on window resize
     function handleResize() {
       setWindowSize({
         width: window.innerWidth,
         height: window.innerHeight,
       });
     }
-    
-    // Add event listener
     window.addEventListener("resize", handleResize);
-    
-    // Call handler right away so state gets updated with initial window size
     handleResize();
-    
-    // Remove event listener on cleanup
     return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+  }, []);
 
   return windowSize;
 };
 
-/**
- * The 404 page component for desktop screens.
- * This is your original component, with the necessary CSS for the button included.
- */
 const DesktopNotFoundPage = () => {
   return (
     <>
@@ -57,10 +41,6 @@ const DesktopNotFoundPage = () => {
   );
 };
 
-/**
- * The 404 page component for mobile screens.
- * This version is lightweight and designed for smaller viewports.
- */
 const MobileNotFoundPage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-black text-white text-center px-4">
@@ -78,22 +58,13 @@ const MobileNotFoundPage = () => {
   );
 };
 
-/**
- * The main NotFoundPage component.
- * It conditionally renders either the Desktop or Mobile version
- * based on the screen width.
- */
 const NotFoundPage = () => {
   const { width } = useWindowSize();
-  const mobileBreakpoint = 768; // Corresponds to Tailwind's `md` breakpoint
+  const mobileBreakpoint = 768;
 
-  // To prevent a flash of the wrong component on initial render,
-  // we can show a blank screen or a loader until the width is determined.
   if (width === undefined) {
     return <div className="w-screen h-screen bg-black" />;
   }
-
-  // Render the mobile version for screens smaller than the breakpoint, otherwise render the desktop version.
   return width < mobileBreakpoint ? <MobileNotFoundPage /> : <DesktopNotFoundPage />;
 };
 

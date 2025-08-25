@@ -5,10 +5,9 @@ import roboGt from './PastEvents/robo-gt.webp'
 import roboLeague from './PastEvents/robo-league.webp'
 import roboSumo from './PastEvents/robo-sumo.webp'
 import poster from '../assets/images/Recruitment Poster (1).png'
-import EventCard from '../components/EventCard'; // Assuming EventCard is styled to be neutral or will adapt
+import EventCard from '../components/EventCard';
 
 const Events = () => {
-  // NOTE: Dates updated to be in the future for logical consistency
   const upcomingEvents = [
     {
       title: "Raspberry pi Bootcamp 2025",
@@ -16,7 +15,7 @@ const Events = () => {
       location: "UEMK Ficci Auditorium",
       description: "Intensive 2-day bootcamp covering fundamentals of raspberry pi, programming, and sensor integration. Perfect for beginners and intermediate learners.",
       status: "upcoming",
-      image: "https://lh5.googleusercontent.com/proxy/uPM0FTbEew-CdV8Vm41PhYS38Ye2RwXm-o7zCnsHvrd1ugMxrmNVPNMwQDnPH7k6zXcWwxga8Ko7m7tRJOts52oh5QKPxbzWK7t7L78"
+      image: "https://pcdiga-prod.eu.saleor.cloud/media/thumbnails/products/raspberry-pi-5-4-gb-ram20598-252795_3991e99b_thumbnail_4096.jpg"
     }
   ];
 
@@ -40,7 +39,7 @@ const Events = () => {
     { title: "Robo GT", description: "Compete in a racing competition for AI-driven robots and showcase your robot's speed and intelligence.", date: "1st-2nd March 2025", venue: "UEM Kolkata Campus", type: "Competition", image: `${roboGt}`, status: "completed" },
   ];
 
-  // A helper function to render a section of events
+
   const EventSection = ({ title, description, events }) => (
     <section className="section-padding px-4">
       <div className="container-max mx-auto">
@@ -52,7 +51,6 @@ const Events = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
-            // Assuming EventCard is designed to fit a dark theme
             <EventCard key={`${event.title}-${event.date}`} {...event} />
           ))}
         </div>
@@ -95,7 +93,6 @@ const Events = () => {
         events={pastEvents}
       />
 
-      {/* Call to Action */}
       <section className="section-padding px-4">
         <div className="container-max mx-auto text-center hud-card border-primary p-10">
           <h2 className="font-heading text-4xl text-white mb-6">Want to Participate?</h2>
