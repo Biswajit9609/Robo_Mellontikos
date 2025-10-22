@@ -19,11 +19,12 @@ const Team = () => {
     { name: "Shubhranshu Ghosh", title: "Student Operation Head", avatarUrl: "../assets/Subhranshu_Ghosh-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/shubhrangshughosh", instagramUrl: "https://www.instagram.com/ghosh.shubhranshu?igsh=MXFwbGloOWwyN3d6ZQ==" },
     { name: "Aadrija Mukherjee", title: "Student Operation Head", avatarUrl: "../assets/Aadrija_Mukherjee-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/adrijamukherjee", instagramUrl: "https://www.instagram.com/_._aaadrijaaa_._?igsh=eDJmcDlraWR4NGg5" },
     { name: "Shubhodip Pal", title: "Tech Head", avatarUrl: "../assets/Subhodip_Pal-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/shubhodip/", instagramUrl: "https://www.instagram.com/shubhodip.pal?igsh=bTI2MmZ3b2h3NXgz" },
-    { name: "Biswajit Chatterjee", title: "Tech Head", avatarUrl: "../assets/Biswajit_Chatterjee-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/", instagramUrl: "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2" },
+    { name: "Biswajit Chatterjee", title: "Web Development Lead", avatarUrl: "../assets/Biswajit_Chatterjee-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/", instagramUrl: "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2" },
     { name: "Haimanti Chakraborty", title: "Graphics Lead", avatarUrl: "../assets/Haimanti_Chakraborty-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/haimanti-chakroborty", instagramUrl: "https://www.instagram.com/h_ingenious_?igsh=NmRlOTVqOWR0c290" },
     { name: "Aratrika Shome", title: "Content Lead", avatarUrl: "../assets/Aratrika_Shome-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/aratrika-shome-ba25ba267/", instagramUrl: "https://www.instagram.com/__aratrikaa?igsh=MTlvczgwbTV2c2dsZQ==" },
     { name: "Swastikaa Dutta", title: "Social Media Lead", avatarUrl: "../assets/Swastikaa_Dutta-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/swastikaa-dutta-602b33307/", instagramUrl: "https://www.instagram.com/iam_swizie?igsh=YzRyZHpmMzdrbmJj" },
-    { name: "Samriddhi Bagchi", title: "Web Development Lead", avatarUrl: "../assets/Samriddhi_Bagchi-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/samriddhibagchi", instagramUrl: "https://www.instagram.com/_mri_here._?igsh=MXdwOW5yenJtYWdlaA==" },
+    { name: "Biswajit Chatterjee", title: "Tech Head", avatarUrl: "../assets/Biswajit_Chatterjee-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/", instagramUrl: "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2" },
+    
   ];
 
   return (

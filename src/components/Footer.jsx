@@ -73,9 +73,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-accent mt-12 pt-8 text-center font-body text-gray-500">
+        <div className="border-t border-accent mt-12 pt-8 text-center font-body text-gray-500 space-y-2">
           <p>
             SYSTEM LOCK: {new Date().getFullYear()} Robo Mellontikos // UEMK Division. All rights reserved.
+          </p>
+          <p>
+            <a 
+              href="https://biswajit-chatterjee.dev/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-white transition-colors duration-300 hover:underline"
+            >
+              Crafted with precision and passion by Biswajit Chatterjee
+            </a>
           </p>
         </div>
       </div>
