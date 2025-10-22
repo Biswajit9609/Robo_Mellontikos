@@ -19,7 +19,32 @@ const ProfileCard = ({
 
       <div className="card-content">
         <div className="avatar-container">
-          <img src={avatarUrl} alt={`${name}'s avatar`} className="avatar-image" />
+          <img 
+            src={avatarUrl} 
+            alt={`${name}'s avatar`} 
+            className="avatar-image"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          <div 
+            className="avatar-fallback"
+            style={{
+              display: 'none',
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              backgroundColor: 'var(--color-bg-deep-purple)',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '14px',
+              color: 'var(--color-accent)',
+              textAlign: 'center'
+            }}
+          >
+            {firstName}<br />avatar
+          </div>
         </div>
 
         <div className="info-container">

@@ -1,44 +1,8 @@
-const About = () => {
-  const operatingProtocols = [
-    {
-      title: "Disruptive Engineering",
-      description: "We don't just innovate; we rewrite the rules. Our focus is on creating tech that shatters the status quo.",
-      icon: "[INITIATE!]",
-    },
-    {
-      title: "Syndicate Protocol",
-      description: "Every agent is a vital node in our network. We sync our knowledge and skills to execute complex objectives.",
-      icon: "[SYNC]",
-    },
-    {
-      title: "Active Data-Mining",
-      description: "Knowledge is power. We maintain a constant state of learning, downloading new skills and upgrading our core programming.",
-      icon: "[ACQUIRE]",
-    },
-    {
-      title: "Peak Performance",
-      description: "Good enough is a system error. We overclock our efforts to achieve flawless execution in every build and broadcast.",
-      icon: "[EXECUTE]",
-    },
-  ];
+import React from "react";
+import { useConfig } from '../hooks/useConfig';
 
-  const historyLogs = [
-    {
-      year: "2019 // Foundation",
-      log: "Founded by a group of passionate engineering students with a vision to create a platform for robotics education and innovation at UEM Kolkata.",
-      color: "border-primary",
-    },
-    {
-      year: "2020-2021 // Expansion",
-      log: "Expanded membership, established our first laboratory, and participated in regional competitions, winning several awards for innovation.",
-      color: "border-secondary",
-    },
-    {
-      year: "2022-2025 // Excellence",
-      log: "Achieved national recognition, published research papers, and established partnerships with industry leaders. Currently leading multiple cutting-edge projects.",
-      color: "border-accent",
-    }
-  ];
+const About = () => {
+  const { config } = useConfig();
 
   return (
     <div className="min-h-screen cyber-grid-bg font-body text-gray-300 pt-24">
@@ -91,8 +55,8 @@ const About = () => {
               className="w-full h-full object-cover shadow-lg border-2 border-accent"
             />
             <div className="space-y-8">
-              {historyLogs.map((log) => (
-                <div key={log.year} className={`border-l-4 ${log.color} pl-6`}>
+              {config.about.historyLogs.map((log) => (
+                <div key={log.id} className={`border-l-4 ${log.color} pl-6`}>
                   <h3 className="font-heading text-xl text-white mb-1">{log.year}</h3>
                   <p>{log.log}</p>
                 </div>
@@ -110,8 +74,8 @@ const About = () => {
             The core principles hardwired into our syndicate's mainframe.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {operatingProtocols.map((protocol, index) => (
-              <div key={index} className="hud-card p-6 text-center border-secondary">
+            {config.about.operatingProtocols.map((protocol) => (
+              <div key={protocol.id} className="hud-card p-6 text-center border-secondary">
                 <div className="font-mono text-2xl text-primary mb-4 flicker">{protocol.icon}</div>
                 <h3 className="font-heading text-xl text-white mb-2">{protocol.title}</h3>
                 <p className="text-gray-400">{protocol.description}</p>
@@ -141,6 +105,30 @@ const About = () => {
               <h3 className="font-heading text-xl text-white mb-2">Project: Chimera</h3>
               <p className="text-gray-400">Our deep-tech startup incubation program.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-4">
+        <div className="container-max mx-auto text-center">
+          <h2 className="font-heading text-4xl text-white mb-6">Ready to Join the Syndicate?</h2>
+          <p className="text-xl mb-8 text-gray-400 max-w-2xl mx-auto">
+            Be part of the next generation of robotics engineers. Join our network and help shape the future.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href={config.cta.pages.about.primaryCta}
+              className="btn-cyber-primary"
+            >
+              Join Us
+            </a>
+            <a
+              href={config.cta.pages.about.secondaryCta}
+              className="btn-cyber-outline"
+            >
+              Contact Us
+            </a>
           </div>
         </div>
       </section>

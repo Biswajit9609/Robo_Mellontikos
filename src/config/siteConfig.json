@@ -1,0 +1,333 @@
+{
+  "general": {
+    "siteName": "Robo Mellontikos",
+    "tagline": "UEM Kolkata Robotics Division",
+    "description": "A syndicate of engineers and innovators from UEM Kolkata, forging the future of autonomous systems and intelligent robotics.",
+    "email": "robotics.society.uemk@gmail.com",
+    "address": {
+      "line1": "University of Engineering & Management",
+      "line2": "New Town, Action Area III, Kolkata - 700160",
+      "line3": "West Bengal, India"
+    }
+  },
+  "cta": {
+    "joinUsUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+    "subscribeUrl": "mailto:robomellontikos@uem.edu.in?subject=Event Notifications",
+    "pages": {
+      "home": {
+        "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "secondaryCta": "mailto:robomellontikos@uem.edu.in?subject=Event Notifications"
+      },
+      "about": {
+        "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "secondaryCta": "/contact"
+      },
+      "team": {
+        "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "secondaryCta": "/about"
+      },
+      "events": {
+        "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "secondaryCta": "/contact"
+      },
+      "contact": {
+        "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "secondaryCta": "/team"
+      }
+    }
+  },
+  "team": {
+    "advisors": [
+      {
+        "id": "advisor-1",
+        "name": "Dr. Ayan Chatterjee",
+        "title": "Faculty Advisor",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158076/ayan_chatterjee-removebg-preview_lqlnsr.png",
+        "linkedInUrl": "https://www.linkedin.com/in/ayan-chatterjee-85928423/",
+        "instagramUrl": null
+      }
+    ],
+    "coreTeam": [
+      {
+        "id": "member-1",
+        "name": "Ankush Dutta",
+        "title": "President",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158075/Ankush_Dutta_2-removebg-preview_zswm01.png",
+        "linkedInUrl": "https://www.linkedin.com/in/ankush-dutta",
+        "instagramUrl": "https://www.instagram.com/i._.ankush?igsh=MTAwMnB6emM0ZGM4MA=="
+      },
+      {
+        "id": "member-2",
+        "name": "Amitabh Daripa",
+        "title": "Vice President",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158075/Amitabh_Daripa-removebg-preview_dvrifq.png",
+        "linkedInUrl": "https://www.linkedin.com/in/amitabh-daripa-1635a3257/",
+        "instagramUrl": "https://www.instagram.com/myself_amitabh?igsh=MXBoa2VxdGRieWF4dQ%3D%3D&utm_source=qr"
+      },
+      {
+        "id": "member-3",
+        "name": "Hitesh Mukherjee",
+        "title": "Secretary",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158112/Hitesh_Mukherjee-removebg-preview_2_efynys.png",
+        "linkedInUrl": "https://www.linkedin.com/in/hitesh-mukherjee-cse/",
+        "instagramUrl": "https://www.instagram.com/_hiteshhh._?igsh=MTBpYTM1czM1OWd2aA=="
+      },
+      {
+        "id": "member-4",
+        "name": "Anusua Ghosh",
+        "title": "Treasurer",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158075/Anusua_Ghosh_2-removebg-preview_rtoqpu.png",
+        "linkedInUrl": "https://www.linkedin.com/in/anusua-ghosh-6b2971237/",
+        "instagramUrl": "https://www.instagram.com/anusua_ghosh____?igsh=MTk1Zmt0ZWRkMms1Ng=="
+      },
+      {
+        "id": "member-5",
+        "name": "Shubhranshu Ghosh",
+        "title": "Student Operation Head",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158125/Subhranshu_Ghosh-removebg-preview2_dscqgn.png",
+        "linkedInUrl": "https://www.linkedin.com/in/shubhrangshughosh",
+        "instagramUrl": "https://www.instagram.com/ghosh.shubhranshu?igsh=MXFwbGloOWwyN3d6ZQ=="
+      },
+      {
+        "id": "member-6",
+        "name": "Aadrija Mukherjee",
+        "title": "Student Operation Head",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158076/Aadrija_Mukherjee-removebg-preview_qaxcnr.png",
+        "linkedInUrl": "https://www.linkedin.com/in/adrijamukherjee",
+        "instagramUrl": "https://www.instagram.com/_._aaadrijaaa_._?igsh=eDJmcDlraWR4NGg5"
+      },
+      {
+        "id": "member-7",
+        "name": "Shubhodip Pal",
+        "title": "Tech Head",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158127/Subhodip_Pal-removebg-preview_lnxkon.png",
+        "linkedInUrl": "https://www.linkedin.com/in/shubhodip/",
+        "instagramUrl": "https://www.instagram.com/shubhodip.pal?igsh=bTI2MmZ3b2h3NXgz"
+      },
+      {
+        "id": "member-8",
+        "name": "Biswajit Chatterjee",
+        "title": "Web Development Lead",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158111/Biswajit_Chatterjee-removebg-preview2_vfanip.png",
+        "linkedInUrl": "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/",
+        "instagramUrl": "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2"
+      },
+      {
+        "id": "member-9",
+        "name": "Haimanti Chakraborty",
+        "title": "Graphics Lead",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158112/Haimanti_Chakraborty-removebg-preview_rnexj4.png",
+        "linkedInUrl": "https://www.linkedin.com/in/haimanti-chakroborty",
+        "instagramUrl": "https://www.instagram.com/h_ingenious_?igsh=NmRlOTVqOWR0c290"
+      },
+      {
+        "id": "member-10",
+        "name": "Aratrika Shome",
+        "title": "Content Lead",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158075/Aratrika_Shome-removebg-preview_rhyukz.png",
+        "linkedInUrl": "https://www.linkedin.com/in/aratrika-shome-ba25ba267/",
+        "instagramUrl": "https://www.instagram.com/__aratrikaa?igsh=MTlvczgwbTV2c2dsZQ=="
+      },
+      {
+        "id": "member-11",
+        "name": "Swastikaa Dutta",
+        "title": "Social Media Lead",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158115/Swastikaa_Dutta-removebg-preview2_fca89g.png",
+        "linkedInUrl": "https://www.linkedin.com/in/swastikaa-dutta-602b33307/",
+        "instagramUrl": "https://www.instagram.com/iam_swizie?igsh=YzRyZHpmMzdrbmJj"
+      },
+      {
+        "id": "member-12",
+        "name": "Biswajit Chatterjee",
+        "title": "Tech Head",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158111/Biswajit_Chatterjee-removebg-preview2_vfanip.png",
+        "linkedInUrl": "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/",
+        "instagramUrl": "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2"
+      }
+    ]
+  },
+  "events": {
+    "upcomingEvents": [
+      {
+        "id": "upcoming-1",
+        "title": "Raspberry pi Bootcamp 2025",
+        "date": "To Be Announced",
+        "location": "UEMK Ficci Auditorium",
+        "description": "Intensive 2-day bootcamp covering fundamentals of raspberry pi, programming, and sensor integration. Perfect for beginners and intermediate learners.",
+        "status": "upcoming",
+        "image": "https://lh5.googleusercontent.com/proxy/uPM0FTbEew-CdV8Vm41PhYS38Ye2RwXm-o7zCnsHvrd1ugMxrmNVPNMwQDnPH7k6zXcWwxga8Ko7m7tRJOts52oh5QKPxbzWK7t7L78"
+      }
+    ],
+    "ongoingEvents": [
+      {
+        "id": "ongoing-1",
+        "title": "🚀 WE ARE RECRUITING | Robo Mellontikos",
+        "date": "Last Date: 2025.09.15",
+        "location": null,
+        "description": "If your heart beats in binary and your mind sparks with innovation, this is your cue. Whether you're a coder, creator, planner, or dreamer, if you've got the drive, we've got the platform.",
+        "status": "ongoing",
+        "image": "../assets/images/Recruitment Poster (1).png"
+      }
+    ],
+    "pastEvents": [
+      {
+        "id": "past-1",
+        "title": "Robo Dangal",
+        "description": "Compete in the ultimate bot wrestling showdown and prove your robot's strength.",
+        "date": "1st-2nd March 2025",
+        "venue": "UEM Kolkata Campus",
+        "type": "Competition",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761161280/events/gm3mmkvkdi9cvgvfiiia.webp",
+        "status": "completed"
+      },
+      {
+        "id": "past-2",
+        "title": "Robo Sumo",
+        "description": "Build and compete with autonomous robots in a sumo wrestling match.",
+        "date": "1st-2nd March 2025",
+        "venue": "UEM Kolkata Campus",
+        "type": "Competition",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761161268/events/libl33p9s9mpdp3atnfm.webp",
+        "status": "completed"
+      },
+      {
+        "id": "past-3",
+        "title": "Need for Torque",
+        "description": "Compete in a high-speed robotic drag race and prove your robot's speed.",
+        "date": "1st-2nd March 2025",
+        "venue": "UEM Kolkata Campus",
+        "type": "Competition",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761161255/events/d03bfkdwggzf31fti3mw.webp",
+        "status": "completed"
+      },
+      {
+        "id": "past-4",
+        "title": "Robo League",
+        "description": "Compete in a robotic soccer league and showcase your robot's agility and skills.",
+        "date": "1st-2nd March 2025",
+        "venue": "UEM Kolkata Campus",
+        "type": "Competition",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761161243/events/a8ewygyiunotswjeomfc.webp",
+        "status": "completed"
+      },
+      {
+        "id": "past-5",
+        "title": "Dirreción",
+        "description": "Build a line-following robot and compete in this challenging event.",
+        "date": "1st-2nd March 2025",
+        "venue": "UEM Kolkata Campus",
+        "type": "Competition",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761161224/events/bhtqchgjtr4mla7hagrx.webp",
+        "status": "completed"
+      },
+      {
+        "id": "past-6",
+        "title": "Robo GT",
+        "description": "Compete in a racing competition for AI-driven robots and showcase your robot's speed and intelligence.",
+        "date": "1st-2nd March 2025",
+        "venue": "UEM Kolkata Campus",
+        "type": "Competition",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761161208/events/y5odnnjanebrizqpu2pc.webp",
+        "status": "completed"
+      }
+    ]
+  },
+  "contact": {
+    "departments": [
+      {
+        "id": "dept-1",
+        "name": "General Inquiries",
+        "contact": "Ankush Dutta : 8391903846",
+        "description": "For general questions and information about the club"
+      },
+      {
+        "id": "dept-2",
+        "name": "Membership",
+        "contact": "Hitesh Mukherjee : 6291605058",
+        "description": "For joining the club and membership-related queries"
+      },
+      {
+        "id": "dept-3",
+        "name": "Events",
+        "contact": "Amitabh Daripa : 8116262946",
+        "description": "For event participation, sponsorship, and collaboration"
+      },
+      {
+        "id": "dept-4",
+        "name": "Technical Support",
+        "contact": "Biswajit Chatterjee : 7001641316",
+        "description": "For technical queries and project assistance"
+      }
+    ]
+  },
+  "about": {
+    "operatingProtocols": [
+      {
+        "id": "protocol-1",
+        "title": "Disruptive Engineering",
+        "description": "We don't just innovate; we rewrite the rules. Our focus is on creating tech that shatters the status quo.",
+        "icon": "[INITIATE!]"
+      },
+      {
+        "id": "protocol-2",
+        "title": "Syndicate Protocol",
+        "description": "Every agent is a vital node in our network. We sync our knowledge and skills to execute complex objectives.",
+        "icon": "[SYNC]"
+      },
+      {
+        "id": "protocol-3",
+        "title": "Active Data-Mining",
+        "description": "Knowledge is power. We maintain a constant state of learning, downloading new skills and upgrading our core programming.",
+        "icon": "[ACQUIRE]"
+      },
+      {
+        "id": "protocol-4",
+        "title": "Peak Performance",
+        "description": "Good enough is a system error. We overclock our efforts to achieve flawless execution in every build and broadcast.",
+        "icon": "[EXECUTE]"
+      }
+    ],
+    "historyLogs": [
+      {
+        "id": "history-1",
+        "year": "2019 // Foundation",
+        "log": "Founded by a group of passionate engineering students with a vision to create a platform for robotics education and innovation at UEM Kolkata.",
+        "color": "border-primary"
+      },
+      {
+        "id": "history-2",
+        "year": "2020-2021 // Expansion",
+        "log": "Expanded membership, established our first laboratory, and participated in regional competitions, winning several awards for innovation.",
+        "color": "border-secondary"
+      },
+      {
+        "id": "history-3",
+        "year": "2022-2025 // Excellence",
+        "log": "Achieved national recognition, published research papers, and established partnerships with industry leaders. Currently leading multiple cutting-edge projects.",
+        "color": "border-accent"
+      }
+    ]
+  },
+  "home": {
+    "features": [
+      {
+        "id": "feature-1",
+        "title": "AI & Machine Learning",
+        "description": "Cutting-edge research in artificial intelligence, neural networks, and autonomous decision-making systems.",
+        "colorClass": "border-primary"
+      },
+      {
+        "id": "feature-2",
+        "title": "Autonomous Systems",
+        "description": "Developing self-navigating robots, drones, and vehicles with advanced sensor integration.",
+        "colorClass": "border-secondary"
+      },
+      {
+        "id": "feature-3",
+        "title": "IoT Integration",
+        "description": "Connecting robotics with Internet of Things, creating smart environments and interconnected systems.",
+        "colorClass": "border-accent"
+      }
+    ]
+  }
+}

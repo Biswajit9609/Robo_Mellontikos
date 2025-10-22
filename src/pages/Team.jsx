@@ -1,31 +1,8 @@
 import ProfileCard from '../components/ProfileCard';
+import { useConfig } from '../hooks/useConfig';
 
 const Team = () => {
-  const advisors = [
-    {
-      name: "Dr. Ayan Chatterjee",
-      role: "Faculty Advisor",
-      avatarUrl: '../assets/ayan_chatterjee-removebg-preview.png',
-      linkedInUrl: "https://www.linkedin.com/in/ayan-chatterjee-85928423/",
-      instagramUrl: null,
-    },
-  ];
-
-  const coreTeam = [
-    { name: "Ankush Dutta", title: "President", avatarUrl: "../assets/Ankush_Dutta_2-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/ankush-dutta", instagramUrl: "https://www.instagram.com/i._.ankush?igsh=MTAwMnB6emM0ZGM4MA==" },
-    { name: "Amitabh Daripa", title: "Vice President", avatarUrl: "../assets/Amitabh_Daripa-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/amitabh-daripa-1635a3257/", instagramUrl: "https://www.instagram.com/myself_amitabh?igsh=MXBoa2VxdGRieWF4dQ%3D%3D&utm_source=qr" },
-    { name: "Hitesh Mukherjee", title: "Secretary", avatarUrl: "../assets/Hitesh_Mukherjee-removebg-preview 2.png", linkedInUrl: "https://www.linkedin.com/in/hitesh-mukherjee-cse/", instagramUrl: "https://www.instagram.com/_hiteshhh._?igsh=MTBpYTM1czM1OWd2aA==" },
-    { name: "Anusua Ghosh", title: "Treasurer", avatarUrl: "../assets/Anusua_Ghosh_2-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/anusua-ghosh-6b2971237/", instagramUrl: "https://www.instagram.com/anusua_ghosh____?igsh=MTk1Zmt0ZWRkMms1Ng==" },
-    { name: "Shubhranshu Ghosh", title: "Student Operation Head", avatarUrl: "../assets/Subhranshu_Ghosh-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/shubhrangshughosh", instagramUrl: "https://www.instagram.com/ghosh.shubhranshu?igsh=MXFwbGloOWwyN3d6ZQ==" },
-    { name: "Aadrija Mukherjee", title: "Student Operation Head", avatarUrl: "../assets/Aadrija_Mukherjee-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/adrijamukherjee", instagramUrl: "https://www.instagram.com/_._aaadrijaaa_._?igsh=eDJmcDlraWR4NGg5" },
-    { name: "Shubhodip Pal", title: "Tech Head", avatarUrl: "../assets/Subhodip_Pal-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/shubhodip/", instagramUrl: "https://www.instagram.com/shubhodip.pal?igsh=bTI2MmZ3b2h3NXgz" },
-    { name: "Biswajit Chatterjee", title: "Web Development Lead", avatarUrl: "../assets/Biswajit_Chatterjee-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/", instagramUrl: "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2" },
-    { name: "Haimanti Chakraborty", title: "Graphics Lead", avatarUrl: "../assets/Haimanti_Chakraborty-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/haimanti-chakroborty", instagramUrl: "https://www.instagram.com/h_ingenious_?igsh=NmRlOTVqOWR0c290" },
-    { name: "Aratrika Shome", title: "Content Lead", avatarUrl: "../assets/Aratrika_Shome-removebg-preview.png", linkedInUrl: "https://www.linkedin.com/in/aratrika-shome-ba25ba267/", instagramUrl: "https://www.instagram.com/__aratrikaa?igsh=MTlvczgwbTV2c2dsZQ==" },
-    { name: "Swastikaa Dutta", title: "Social Media Lead", avatarUrl: "../assets/Swastikaa_Dutta-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/swastikaa-dutta-602b33307/", instagramUrl: "https://www.instagram.com/iam_swizie?igsh=YzRyZHpmMzdrbmJj" },
-    { name: "Biswajit Chatterjee", title: "Tech Head", avatarUrl: "../assets/Biswajit_Chatterjee-removebg-preview2.png", linkedInUrl: "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/", instagramUrl: "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2" },
-    
-  ];
+  const { config } = useConfig();
 
   return (
     <div className="min-h-screen cyber-grid-bg font-body text-gray-300 pt-24">
@@ -49,11 +26,11 @@ const Team = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            {advisors.map((member) => (
+            {config.team.advisors.map((member) => (
               <ProfileCard
-                key={member.name}
+                key={member.id}
                 name={member.name}
-                title={member.role}
+                title={member.title}
                 avatarUrl={member.avatarUrl}
                 linkedInUrl={member.linkedInUrl}
                 instagramUrl={member.instagramUrl}
@@ -72,9 +49,9 @@ const Team = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 justify-items-center">
-            {coreTeam.map((member) => (
+            {config.team.coreTeam.map((member) => (
               <ProfileCard
-                key={member.name}
+                key={member.id}
                 name={member.name}
                 title={member.title}
                 avatarUrl={member.avatarUrl}
@@ -110,7 +87,7 @@ const Team = () => {
             </div>
           </div>
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform"
+            href={config.cta.pages.team.primaryCta}
             className="btn-cyber-primary"
           >
             Apply to Join

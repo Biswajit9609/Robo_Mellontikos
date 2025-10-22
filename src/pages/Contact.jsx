@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useConfig } from '../hooks/useConfig';
 
 const Contact = () => {
+  const { config } = useConfig();
+  
   const socialChannels = [
     { 
       title: "Instagram", 
@@ -42,13 +45,6 @@ const Contact = () => {
         </svg>
       )
     },
-  ];
-
-  const departments = [
-    { name: "General Inquiries", contact: "Ankush Dutta : 8391903846", description: "For general questions and information about the club" },
-    { name: "Membership", contact: "Hitesh Mukherjee : 6291605058", description: "For joining the club and membership-related queries" },
-    { name: "Events", contact: "Amitabh Daripa : 8116262946", description: "For event participation, sponsorship, and collaboration" },
-    { name: "Technical Support", contact: "Biswajit Chatterjee : 7001641316", description: "For technical queries and project assistance" }
   ];
 
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
@@ -100,7 +96,6 @@ const Contact = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {socialChannels.map((item) => (
-              // MODIFIED: Added flexbox classes to center the content vertically and horizontally
               <a key={item.title} href={item.link} target="_blank" rel="noopener noreferrer" className="hud-card p-6 text-center border-secondary group flex flex-col items-center justify-center">
                 <div className="text-primary mb-4 transition-transform duration-300 group-hover:scale-110">
                   {item.icon}
@@ -123,10 +118,10 @@ const Contact = () => {
               <p className="text-xl text-gray-400 mt-4">Route your query to the correct sub-division.</p>
             </div>
             <div className="space-y-6">
-              {departments.map((dept) => {
+              {config.contact.departments.map((dept) => {
                 const phoneNumber = dept.contact.split(':')[1]?.trim();
                 return (
-                  <div key={dept.name} className="hud-card p-4 border-accent">
+                  <div key={dept.id} className="hud-card p-4 border-accent">
                     <h3 className="font-heading text-lg text-white mb-2">{dept.name}</h3>
                     <p className="text-gray-400 text-sm mb-3">{dept.description}</p>
                     <a href={`tel:${phoneNumber}`} className="font-mono text-primary hover:underline break-all">
@@ -177,27 +172,29 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* <section className="section-padding px-4">
-        <div className="container-max mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-4xl text-white">Syndicate HQ</h2>
-            <p className="text-xl text-gray-400 mt-4 max-w-3xl mx-auto">Find our physical node at the University of Engineering and Management, Kolkata.</p>
-          </div>
-          <div className="w-full h-96 md:h-[500px] rounded-lg overflow-hidden">
-            <iframe
-              src="http://googleusercontent.com/maps/google.com/1"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="UEM Kolkata Map"
-              className="cyber-map"
-            ></iframe>
+      {/* Call to Action */}
+      <section className="section-padding px-4">
+        <div className="container-max mx-auto text-center">
+          <h2 className="font-heading text-4xl text-white mb-6">Ready to Connect?</h2>
+          <p className="text-xl mb-8 text-gray-400 max-w-2xl mx-auto">
+            Join our community of innovators and be part of the robotics revolution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href={config.cta.pages.contact.primaryCta}
+              className="btn-cyber-primary"
+            >
+              Join Us
+            </a>
+            <a
+              href={config.cta.pages.contact.secondaryCta}
+              className="btn-cyber-outline"
+            >
+              Meet the Team
+            </a>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };
