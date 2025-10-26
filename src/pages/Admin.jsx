@@ -10,7 +10,7 @@ const Admin = () => {
   const [editingItem, setEditingItem] = useState(null);
   const [formData, setFormData] = useState({});
 
-  const ADMIN_PASSWORD = 'rm-admin-2024';
+  const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
 
   const handleLogin = (e) => {
     e.preventDefault();
