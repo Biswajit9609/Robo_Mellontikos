@@ -91,6 +91,14 @@ const Admin = () => {
       newItem.title = '';
       newItem.description = '';
       newItem.colorClass = 'border-primary';
+    } else if (section === 'courses') {
+      newItem.title = '';
+      newItem.description = '';
+      newItem.url = '';
+      newItem.couponFormUrl = '';
+      newItem.image = '';
+      newItem.rating = '';
+      newItem.students = '';
     }
 
     setEditingItem({ section, item: newItem, isNew: true, subsection });
@@ -139,7 +147,7 @@ const Admin = () => {
                   <ImageUpload
                     currentImage={formData[key] || ''}
                     onImageUpload={(url) => setFormData({...formData, [key]: url})}
-                    folder={section === 'team' ? 'team-members' : 'events'}
+                    folder={section === 'team' ? 'team-members' : section === 'courses' ? 'courses' : 'events'}
                   />
                 ) : (
                   <input
@@ -211,7 +219,7 @@ const Admin = () => {
         </div>
 
         <div className="flex gap-4 mb-8">
-          {['general', 'cta', 'team', 'events', 'contact', 'home'].map(tab => (
+          {['general', 'cta', 'team', 'events', 'contact', 'courses', 'home'].map(tab => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -449,6 +457,46 @@ const Admin = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'courses' && (
+            <div>
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-bold">Courses Management</h2>
+                <button
+                  onClick={() => handleAdd('courses', 'availableCourses')}
+                  className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
+                >
+                  Add Course
+                </button>
+              </div>
+              <div className="grid gap-4">
+                {config.courses?.availableCourses?.map(course => (
+                  <div key={course.id} className="bg-slate-700 p-4 rounded flex justify-between items-center">
+                    <div>
+                      <strong>{course.title}</strong>
+                      <div className="text-sm text-gray-300 mt-1">
+                        Rating: {course.rating} | Students: {course.students}
+                      </div>
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => handleEdit('courses', course, 'availableCourses')}
+                        className="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-sm"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => handleDelete('courses', course.id, 'availableCourses')}
+                        className="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-sm"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                )) || []}
               </div>
             </div>
           )}

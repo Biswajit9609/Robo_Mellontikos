@@ -33,6 +33,10 @@
       "contact": {
         "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
         "secondaryCta": "/team"
+      },
+      "courses": {
+        "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "secondaryCta": "/contact"
       }
     }
   },
@@ -327,6 +331,40 @@
         "title": "IoT Integration",
         "description": "Connecting robotics with Internet of Things, creating smart environments and interconnected systems.",
         "colorClass": "border-accent"
+      }
+    ]
+  },
+  "courses": {
+    "availableCourses": [
+      {
+        "id": "course-1",
+        "title": "Master Web & Mobile Design: Figma UI/UX Essentials & More",
+        "description": "Complete UI/UX Design Course: Figma, Mobile & Web Design, Prototyping, Wireframing, User Research, Design Systems & Portfolio",
+        "url": "https://www.udemy.com/course/master-web-mobile-design-figma-uiux-essentials-more/?im_ref=QPsW181WzxyKRt6ytUzrBynuUkpUG-Qo00000w0&sharedid=&irpid=6571380&utm_medium=affiliate&utm_source=impact&utm_audience=mx&utm_tactic=%22Content%22%2C%22ROW%22&utm_content=3193860&utm_campaign=6571380&irgwc=1&afsrc=1",
+        "couponFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761000000/courses/figma-course.jpg",
+        "rating": "4.6",
+        "students": "15,234"
+      },
+      {
+        "id": "course-2",
+        "title": "Oracle Certification Java 21 - Learn IT",
+        "description": "Complete Java 21 Course for Oracle Certification. Master Java fundamentals, OOP, collections, streams, and more.",
+        "url": "https://www.udemy.com/course/oracle-certification-java-21-learnit/?im_ref=QPsW181WzxyKRt6ytUzrBynuUkpUD0Ww00000w0&sharedid=&irpid=6571380&utm_medium=affiliate&utm_source=impact&utm_audience=mx&utm_tactic=%22Content%22%2C%22ROW%22&utm_content=3193860&utm_campaign=6571380&irgwc=1&afsrc=1",
+        "couponFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761000000/courses/java-course.jpg",
+        "rating": "4.7",
+        "students": "8,945"
+      },
+      {
+        "id": "course-3",
+        "title": "From Prompt Engineering to Agent Engineering",
+        "description": "Master AI Agent Development: From Basic Prompts to Advanced Multi-Agent Systems with LangChain, AutoGen & CrewAI",
+        "url": "https://www.udemy.com/course/from-prompt-engineering-to-agent-engineering/?im_ref=QPsW181WzxyKRt6ytUzrBynuUkpUDxxk00000w0&sharedid=&irpid=6571380&utm_medium=affiliate&utm_source=impact&utm_audience=mx&utm_tactic=%22Content%22%2C%22ROW%22&utm_content=3193860&utm_campaign=6571380&irgwc=1&afsrc=1",
+        "couponFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
+        "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761000000/courses/ai-course.jpg",
+        "rating": "4.8",
+        "students": "3,567"
       }
     ]
   }

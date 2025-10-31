@@ -10,7 +10,9 @@ import Team from './pages/Team';
 import Events from './pages/Events';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Courses from './pages/Courses';
 import Admin from './pages/Admin';
+import EventsAdmin from './pages/EventsAdmin';
 import useMediaQuery from './hooks/useMediaQuery';
 import NotFoundPage from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -97,7 +99,9 @@ const AppRoutes = ({ isLoading, isDesktop }) => {
             <Route path="/events" element={<Events />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/courses" element={<Courses />} />
             <Route path="/rm-admin" element={<Admin />} />
+            <Route path="/rm-events" element={<EventsAdmin />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
