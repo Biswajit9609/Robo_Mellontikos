@@ -33,10 +33,6 @@
       "contact": {
         "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
         "secondaryCta": "/team"
-      },
-      "courses": {
-        "primaryCta": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
-        "secondaryCta": "/contact"
       }
     }
   },
@@ -144,7 +140,7 @@
         "id": "member-12",
         "name": "Biswajit Chatterjee",
         "title": "Tech Head",
-        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761158111/Biswajit_Chatterjee-removebg-preview2_vfanip.png",
+        "avatarUrl": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761163351/team-members/i6trqk0pcidp68933qvz.png",
         "linkedInUrl": "https://www.linkedin.com/in/biswajit-chatterjee-agggtt/",
         "instagramUrl": "https://www.instagram.com/biswajit_chatterjee_official_?igsh=Y3BjNHkycXlvb3o2"
       }
@@ -340,7 +336,7 @@
         "id": "course-1",
         "title": "Master Web & Mobile Design: Figma UI/UX Essentials & More",
         "description": "Complete UI/UX Design Course: Figma, Mobile & Web Design, Prototyping, Wireframing, User Research, Design Systems & Portfolio",
-        "url": "https://www.udemy.com/course/master-web-mobile-design-figma-uiux-essentials-more/?im_ref=QPsW181WzxyKRt6ytUzrBynuUkpUG-Qo00000w0&sharedid=&irpid=6571380&utm_medium=affiliate&utm_source=impact&utm_audience=mx&utm_tactic=%22Content%22%2C%22ROW%22&utm_content=3193860&utm_campaign=6571380&irgwc=1&afsrc=1",
+        "url": "https://www.udemy.com/course/master-web-mobile-design-figma-uiux-essentials-more/",
         "couponFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
         "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761000000/courses/figma-course.jpg",
         "rating": "4.6",
@@ -350,7 +346,7 @@
         "id": "course-2",
         "title": "Oracle Certification Java 21 - Learn IT",
         "description": "Complete Java 21 Course for Oracle Certification. Master Java fundamentals, OOP, collections, streams, and more.",
-        "url": "https://www.udemy.com/course/oracle-certification-java-21-learnit/?im_ref=QPsW181WzxyKRt6ytUzrBynuUkpUD0Ww00000w0&sharedid=&irpid=6571380&utm_medium=affiliate&utm_source=impact&utm_audience=mx&utm_tactic=%22Content%22%2C%22ROW%22&utm_content=3193860&utm_campaign=6571380&irgwc=1&afsrc=1",
+        "url": "https://www.udemy.com/course/oracle-certification-java-21-learnit/",
         "couponFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
         "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761000000/courses/java-course.jpg",
         "rating": "4.7",
@@ -360,7 +356,7 @@
         "id": "course-3",
         "title": "From Prompt Engineering to Agent Engineering",
         "description": "Master AI Agent Development: From Basic Prompts to Advanced Multi-Agent Systems with LangChain, AutoGen & CrewAI",
-        "url": "https://www.udemy.com/course/from-prompt-engineering-to-agent-engineering/?im_ref=QPsW181WzxyKRt6ytUzrBynuUkpUDxxk00000w0&sharedid=&irpid=6571380&utm_medium=affiliate&utm_source=impact&utm_audience=mx&utm_tactic=%22Content%22%2C%22ROW%22&utm_content=3193860&utm_campaign=6571380&irgwc=1&afsrc=1",
+        "url": "https://www.udemy.com/course/from-prompt-engineering-to-agent-engineering/",
         "couponFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLScMNft6xNC4cH-_pUtstYttRJASDVH0R5B79LQqV1_gWBzdrQ/viewform",
         "image": "https://res.cloudinary.com/dalvwcywm/image/upload/v1761000000/courses/ai-course.jpg",
         "rating": "4.8",

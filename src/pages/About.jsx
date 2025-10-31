@@ -50,7 +50,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <img
-              src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600"
+              src="https://res.cloudinary.com/dalvwcywm/image/upload/v1761922104/Untitled_design_20251029_215825_0000_xcjrxj.png"
               alt="Operatives at work"
               className="w-full h-full object-cover shadow-lg border-2 border-accent"
             />
